@@ -7,6 +7,11 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # Enable CORS for cross-origin requests
 
+@app.route('/warmup', methods=['GET'])
+def warmup():
+    return "Warmed up!", 200
+
+
 @app.route('/convert', methods=['POST'])
 def convert_images():
     if 'images' not in request.files:
