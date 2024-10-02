@@ -1,0 +1,3 @@
+python -m venv convertenv
+
+convertenv\Scripts\activate
